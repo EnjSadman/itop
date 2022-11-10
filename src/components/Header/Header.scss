@@ -1,0 +1,11 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 16px;
+  }
+
+  &__currency {
+    display: block;
+  }
+}
