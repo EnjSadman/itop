@@ -11,5 +11,5 @@ export interface ServerResponse {
 }
 
 interface Currency {
-  currencyName: 'string'
+  [key : string]: 'string'
 }

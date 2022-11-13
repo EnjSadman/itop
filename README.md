@@ -1,9 +1,17 @@
-# React TypeScript Starter Pack
+# Test task for Itop1000
 
-To use this template click `Use this template`
+# Demo
 
-### Available Scripts
+[DEMO LINK](https://enjsadman.github.io/itop/)
 
-`Deploy` - available to deploy your application to gh-pages
+# Description
 
-`SCSS Preprocessor` - available to write your styles with modern style language
+This currency exchanger was made by me as Test task for Itop 1000
+
+# FOR LOCAL DEPLOY
+
+```
+1. npm i
+2. npm start
+3. open your browser at http://localhost:3000
+```

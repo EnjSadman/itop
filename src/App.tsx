@@ -1,34 +1,37 @@
-import { ServerResponse } from 'http';
 import React, { useEffect, useState } from 'react';
 import { fetcher } from './api/api';
 import './App.scss';
+import { Converter } from './components/Converter/Converter';
 import { Header } from './components/Header/Header';
 import { Currency } from './react-app-env';
 
+export function roundToHundreds(num : number) {
+  let amountOfCurrency = num;
+    amountOfCurrency = Math.round(amountOfCurrency * 100) / 100  
+
+  return amountOfCurrency;
+}
+
 export const App: React.FC = () => {
 
-  const [exchangeCourse, setExchangeCourse] = useState<number[]>([]);
+  const [exchangeCourse, setExchangeCourse] = useState<Currency>({});
 
   useEffect(() => {
     const getServerResponse = async () => {
-      //const result = await fetcher();
-      let USD = 0.02701;
-      let EUR = 0.02689;
-      if (USD < 1) {
-        USD = Math.round((1 / USD) * 100) / 100;
-      }
+      const result = await fetcher();
 
-      if (EUR < 1) {
-        EUR = Math.round((1 / EUR) * 100) / 100;
-      }
-      //setExchangeCourse([result.conversion_rates['USD'], result.conversion_rates['EUR']]);
-
-      setExchangeCourse([USD, EUR]) 
+      setExchangeCourse(result.conversion_rates)
     }
     getServerResponse();
   }, []);
 
   return (
-    <Header exchangeCourse={exchangeCourse}/>
+    <div className='container'>    
+      <Header exchangeCourse={exchangeCourse}/>
+      <Converter exchangeCourse={exchangeCourse}/> 
+    </div>
   );
 };
+
+//
+//

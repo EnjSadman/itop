@@ -1,0 +1,41 @@
+.converter {
+  display: flex;
+  justify-content: space-between;
+  padding: 120px;
+  border-radius: 5px;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    min-width: 281px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #CEEDFF;
+    border: unset;
+
+    font-size: 18px;
+    line-height: 27px;
+    color: black;
+
+    padding: 9px 12px;
+
+    &::placeholder {
+      color: grey;
+    }
+  }
+
+  &__currency {
+    min-width: 281px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #CEEDFF;
+    border: unset;
+
+    padding: 9px 12px;
+
+    margin-bottom: 16px;
+  }
+}

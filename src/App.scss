@@ -1,1 +1,9 @@
-
+.body {
+  background-color: gray;
+}
+.container {
+  max-width: 1140px;
+  height: 100vh;
+  margin: 0 auto;
+  background: radial-gradient(86.56% 128.35% at 20.09% 59.73%, #2C35A2 1%, #252C88 16%, #1B2167 40%, #15194F 62%, #101540 83%, #0F133B 100%);
+}
